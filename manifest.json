@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Summarise AI",
+  "description": "Summarise AI is a tool that uses AI to summarise articles and web pages.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "./popup/popup.html",
+    "default_icon": "./images/notebook.png"
+  },
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ]
+}

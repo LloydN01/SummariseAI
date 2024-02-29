@@ -1,21 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Summarise AI</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <h1>
-            Summarise AI
-        </h1>
-        <textarea id="summarised-text" rows="10" cols="50" placeholder="Summarised Text">
+
+<head>
+    <title>Summarise AI</title>
+    <meta charset="utf-8" />
+    <style>
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            display: none;
+        }
+
+        #summarise-btn {
+            visibility: hidden;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Summarise AI</h1>
+    <div id="text-box-container">
+        <textarea id="text-box" rows="10" cols="50" title="Text Box" placeholder="Enter your text here..."></textarea>
         </textarea>
-        <button type="button" id="copy-btn">
-            Copy
-        </button>
-        <button type="button" id="summarise-btn" style="visibility: hidden;">
-            Summarise
-        </button>
-        <script src="../scripts/popup.js"></script>
-    </body>
+        <div id="loader-container">
+            <div id="loading-icon" class="loader">
+            </div>
+        </div>
+    </div>
+    <button type="button" id="copy-btn">Copy</button>
+    <button type="button" id="summarise-btn">
+        Summarise
+    </button>
+
+    <script src="../scripts/popup.js"></script>
+</body>
+
 </html>

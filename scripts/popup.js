@@ -1,5 +1,5 @@
 let modelName = 'bart-large-cnn'; // Default model to use
-const token =  '44c7b10d01e88ac8c87f2956b4e2f77fea285471' 
+const token =  '' 
 
 const summariseText = (textToSummarize) => {
     return fetch(`https://api.nlpcloud.io/v1/${modelName}/summarization`, {
